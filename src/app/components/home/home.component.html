@@ -4,3 +4,24 @@
     <p class="lead">Aplicación de peliculas</p>
   </div>
 </div>
+
+<div class="container">
+  <app-galeria
+    [peliculas]="cartelera | slice: 0:6"
+    titulo="Cartelera"
+  ></app-galeria>
+</div>
+
+<div class="container">
+  <app-galeria
+    [peliculas]="infantiles | slice: 0:6"
+    titulo="Infantiles"
+  ></app-galeria>
+</div>
+
+<div class="container">
+  <app-galeria
+    [peliculas]="populares | slice: 0:6"
+    titulo="Populares"
+  ></app-galeria>
+</div>

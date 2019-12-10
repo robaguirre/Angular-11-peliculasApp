@@ -9,10 +9,6 @@ import { PeliculasService } from './services/peliculas.service';
 export class AppComponent {
 
   constructor(public ps: PeliculasService) {
-    this.ps.getPopulares().subscribe(data => console.log(data));
-
-
-
     // this.ps.buscarPelicula('spiderman').subscribe(data => console.log(data));
   }
 }
