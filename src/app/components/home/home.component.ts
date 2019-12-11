@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit {
 
   constructor(public ps: PeliculasService) {
     this.ps.getCartelera().subscribe(data => { this.cartelera = data; });
-    this.ps.getPopulares().subscribe(data => { this.populares = data; console.log(data); });
-    this.ps.getInfantiles().subscribe(data => { this.infantiles = data; console.log(data); });
+    this.ps.getPopulares().subscribe(data => { this.populares = data; });
+    this.ps.getInfantiles().subscribe(data => { this.infantiles = data; });
   }
 
   ngOnInit() {

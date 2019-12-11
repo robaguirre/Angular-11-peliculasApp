@@ -1,1 +1,31 @@
-<p>search works!</p>
+<div class="container main-container">
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      name="termino"
+      class="form-control"
+      (keyup.enter)="buscarPelicula()"
+      [(ngModel)]="termino"
+      placeholder="Buscar una pelicula"
+    />
+    <div class="input-group-append">
+      <button
+        class="btn btn-outline-success"
+        type="button"
+        id="button-buscar"
+        (click)="buscarPelicula()"
+      >
+        Buscar
+      </button>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="card-columns">
+    <app-pelicula-card
+      [pelicula]="pelicula"
+      *ngFor="let pelicula of ps.peliculas; let i = index"
+    ></app-pelicula-card>
+  </div>
+</div>

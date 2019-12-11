@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { PeliculaImagenPipe } from './pipes/pelicula-imagen.pipe';
 import { GaleriaComponent } from './components/home/galeria.component';
+import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import { GaleriaComponent } from './components/home/galeria.component';
     SearchComponent,
     PeliculaComponent,
     PeliculaImagenPipe,
-    GaleriaComponent
+    GaleriaComponent,
+    PeliculaCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

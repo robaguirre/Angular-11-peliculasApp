@@ -10,6 +10,13 @@
     [peliculas]="cartelera | slice: 0:6"
     titulo="Cartelera"
   ></app-galeria>
+  <br />
+  <div class="card-columns">
+    <app-pelicula-card
+      [pelicula]="pelicula"
+      *ngFor="let pelicula of cartelera | slice: 0:6; let i = index"
+    ></app-pelicula-card>
+  </div>
 </div>
 
 <div class="container">
@@ -17,6 +24,13 @@
     [peliculas]="infantiles | slice: 0:6"
     titulo="Infantiles"
   ></app-galeria>
+  <br />
+  <div class="card-columns">
+    <app-pelicula-card
+      [pelicula]="pelicula"
+      *ngFor="let pelicula of infantiles | slice: 0:6; let i = index"
+    ></app-pelicula-card>
+  </div>
 </div>
 
 <div class="container">
@@ -24,4 +38,11 @@
     [peliculas]="populares | slice: 0:6"
     titulo="Populares"
   ></app-galeria>
+  <br />
+  <div class="card-columns">
+    <app-pelicula-card
+      [pelicula]="pelicula"
+      *ngFor="let pelicula of populares | slice: 0:6; let i = index"
+    ></app-pelicula-card>
+  </div>
 </div>
