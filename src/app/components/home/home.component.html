@@ -14,6 +14,7 @@
   <div class="card-columns">
     <app-pelicula-card
       [pelicula]="pelicula"
+      from="home"
       *ngFor="let pelicula of cartelera | slice: 0:6; let i = index"
     ></app-pelicula-card>
   </div>
@@ -28,6 +29,7 @@
   <div class="card-columns">
     <app-pelicula-card
       [pelicula]="pelicula"
+      from="home"
       *ngFor="let pelicula of infantiles | slice: 0:6; let i = index"
     ></app-pelicula-card>
   </div>
@@ -42,6 +44,7 @@
   <div class="card-columns">
     <app-pelicula-card
       [pelicula]="pelicula"
+      from="home"
       *ngFor="let pelicula of populares | slice: 0:6; let i = index"
     ></app-pelicula-card>
   </div>

@@ -25,6 +25,7 @@
   <div class="card-columns">
     <app-pelicula-card
       [pelicula]="pelicula"
+      from="search"
       *ngFor="let pelicula of ps.peliculas; let i = index"
     ></app-pelicula-card>
   </div>
