@@ -12,6 +12,7 @@ import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { PeliculaImagenPipe } from './pipes/pelicula-imagen.pipe';
 import { GaleriaComponent } from './components/home/galeria.component';
 import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.
     PeliculaComponent,
     PeliculaImagenPipe,
     GaleriaComponent,
-    PeliculaCardComponent
+    PeliculaCardComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

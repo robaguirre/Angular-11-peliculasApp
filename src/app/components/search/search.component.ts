@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SearchComponent implements OnInit {
 
   termino = '';
+  loading: boolean;
 
   constructor(public ps: PeliculasService, private activatedRoute: ActivatedRoute) { }
 
@@ -23,8 +24,9 @@ export class SearchComponent implements OnInit {
   }
 
   buscarPelicula() {
+    this.loading = true;
     if (this.termino.length === 0) { return; }
-    this.ps.buscarPelicula(this.termino).subscribe();
+    this.ps.buscarPelicula(this.termino).subscribe(data => this.loading = false);
   }
 
 }

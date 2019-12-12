@@ -12,7 +12,7 @@ export class PeliculasService {
   private urlMoviedb = 'https://api.themoviedb.org/3';
   private discover: string;
 
-  peliculas: any[] = [];
+  peliculas: any[];
 
   constructor(private http: HttpClient) {
     this.discover = `${this.urlMoviedb}/discover/movie?api_key=${this.apiKey}&language=es`;

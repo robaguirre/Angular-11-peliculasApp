@@ -22,10 +22,21 @@
 
   <hr />
 
-  <div class="card-columns">
+  <app-loading *ngIf="loading" class="m-5"></app-loading>
+
+  <div
+    *ngIf="!loading && ps.peliculas != null && ps.peliculas.length === 0"
+    class="alert alert-warning text-center mt-3 animated fadeIn faster"
+  >
+    <h4 class="alert-heading">No hay registros</h4>
+    <p><i class="fa fa-exclamation fa-2x"></i></p>
+  </div>
+
+  <div class="card-columns" *ngIf="!loading">
     <app-pelicula-card
       [pelicula]="pelicula"
       from="search"
+      [termino]="termino"
       *ngFor="let pelicula of ps.peliculas; let i = index"
     ></app-pelicula-card>
   </div>

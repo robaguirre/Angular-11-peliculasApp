@@ -1,7 +1,7 @@
 <div class="jumbotron jumbotron-fluid animated fadeIn fast">
-  <div class="container">
-    <h1 class="display-4">Peliculas App</h1>
-    <p class="lead">Aplicación de peliculas</p>
+  <div class="container text-center">
+    <h1 class="display-4">Películas App</h1>
+    <p class="lead">Aplicación para la consulta de películas</p>
   </div>
 </div>
 
@@ -15,6 +15,7 @@
     <app-pelicula-card
       [pelicula]="pelicula"
       from="home"
+      termino=""
       *ngFor="let pelicula of cartelera | slice: 0:6; let i = index"
     ></app-pelicula-card>
   </div>
@@ -30,6 +31,7 @@
     <app-pelicula-card
       [pelicula]="pelicula"
       from="home"
+      termino=""
       *ngFor="let pelicula of infantiles | slice: 0:6; let i = index"
     ></app-pelicula-card>
   </div>
@@ -45,6 +47,7 @@
     <app-pelicula-card
       [pelicula]="pelicula"
       from="home"
+      termino=""
       *ngFor="let pelicula of populares | slice: 0:6; let i = index"
     ></app-pelicula-card>
   </div>

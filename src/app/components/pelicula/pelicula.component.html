@@ -22,14 +22,21 @@
       <hr />
       <p>
         Popularidad:
-        <span class="badge badge-primary"
-          >{{ pelicula.popularity | number: ".0-0" }}/10</span
-        >
+        <span class="badge badge-primary">{{
+          pelicula.popularity | number: ".0-0"
+        }}</span>
         <br />
         Voto promedio:
-        <span class="badge badge-primary">{{ pelicula.vote_average }}/10</span>
+        <span class="badge badge-primary">{{ pelicula.vote_average }}</span>
       </p>
       <hr />
+      <button
+        type="button"
+        class="btn btn-outline-danger"
+        [routerLink]="['/' + from, termino]"
+      >
+        Volver
+      </button>
     </div>
   </div>
 </div>

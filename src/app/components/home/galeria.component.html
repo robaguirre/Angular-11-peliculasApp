@@ -10,7 +10,9 @@
           'background-image': 'url( ' + (peliculas[0] | peliculaImagen) + ' )'
         }"
         [routerLink]="['/pelicula', peliculas[0].id, 'home']"
-      ></div>
+      >
+        <p class="pic-titulo">{{ peliculas[0].title }}</p>
+      </div>
     </div>
     <div class="row">
       <div
@@ -20,7 +22,9 @@
             'url(' + (peliculas[2] | peliculaImagen: 300) + ' )'
         }"
         [routerLink]="['/pelicula', peliculas[2].id, 'home']"
-      ></div>
+      >
+        <p class="pic-titulo">{{ peliculas[2].title }}</p>
+      </div>
       <div
         class="col-sm-6 div-pic-2 puntero"
         [ngStyle]="{
@@ -28,7 +32,9 @@
             'url(' + (peliculas[3] | peliculaImagen: 300) + ' )'
         }"
         [routerLink]="['/pelicula', peliculas[3].id, 'home']"
-      ></div>
+      >
+        <p class="pic-titulo">{{ peliculas[3].title }}</p>
+      </div>
     </div>
   </div>
   <div class="col-sm-6">
@@ -40,7 +46,9 @@
             'url(' + (peliculas[4] | peliculaImagen: 300) + ' )'
         }"
         [routerLink]="['/pelicula', peliculas[4].id, 'home']"
-      ></div>
+      >
+        <p class="pic-titulo">{{ peliculas[4].title }}</p>
+      </div>
       <div
         class="col-sm-6 div-pic-2 puntero"
         [ngStyle]="{
@@ -48,7 +56,9 @@
             'url(' + (peliculas[5] | peliculaImagen: 300) + ' )'
         }"
         [routerLink]="['/pelicula', peliculas[5].id, 'home']"
-      ></div>
+      >
+        <p class="pic-titulo">{{ peliculas[5].title }}</p>
+      </div>
     </div>
     <div class="row">
       <div
@@ -57,7 +67,9 @@
           'background-image': 'url(' + (peliculas[1] | peliculaImagen) + ' )'
         }"
         [routerLink]="['/pelicula', peliculas[1].id, 'home']"
-      ></div>
+      >
+        <p class="pic-titulo">{{ peliculas[1].title }}</p>
+      </div>
     </div>
   </div>
 </div>

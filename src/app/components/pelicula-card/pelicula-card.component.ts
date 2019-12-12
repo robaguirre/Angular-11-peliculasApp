@@ -10,14 +10,16 @@ export class PeliculaCardComponent implements OnInit {
 
   @Input() pelicula: any;
   @Input() from: string;
+  @Input() termino: string;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  // Tambien se podria usar routerLink en el html
   verMas() {
-    this.router.navigate(['/pelicula', this.pelicula.id, this.from]);
+    this.router.navigate(['/pelicula', this.pelicula.id, this.from, this.termino]);
   }
 
 }
